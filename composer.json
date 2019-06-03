@@ -1,5 +1,5 @@
 {
-  "name": "core-solutions/admin",
+  "name": "core-solutions/core-admin",
   "description": "Package for creating adminpanel in Laravel 5",
   "license": "MIT",
   "authors": [
