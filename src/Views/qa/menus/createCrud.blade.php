@@ -148,6 +148,7 @@
             $(e).parent().parent().find('.size').hide();
             $(e).parent().parent().find('.dimensions').hide();
             $(e).parent().parent().find('.enum').hide();
+            $(e).parent().parent().find('.relationship-field').hide();
 
             // Show a checbox which enables/disables showing in list
             $(e).parent().parent().parent().find('.show2').show();
@@ -177,6 +178,9 @@
                 case 'photo':
                     $(e).parent().parent().find('.size').show();
                     $(e).parent().parent().find('.dimensions').show();
+                    break;
+                case'dropdown':
+                    $(e).parent().parent().find('.dropdown-list').show();
                     break;
             }
         }
@@ -222,6 +226,13 @@
             });
             $(document).on('change', '.relationship', function () {
                 relationshipChange($(this))
+            });
+
+            $(document).on('click','.add-more-option', function(){
+                var clonedDiv = $(this).parents('.dropdown-list-repeat:first').clone();
+                $(this).parents('.dropdown-list').append(clonedDiv);
+                $(this).parents('.dropdown-list').find('.dropdown-list-repeat:last').find('input').val('');
+                $(this).parents('.dropdown-list').find('.dropdown-list-repeat:last').find('.add-more-button').remove();
             });
         });
 

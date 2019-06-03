@@ -11,6 +11,7 @@ class FieldsDescriber
     {
         return [
             'text'         => 'Text field',
+            'dropdown'     => 'Dropdown',
             'email'        => 'Email field',
             'textarea'     => 'Long text field',
             'radio'        => 'Radio',
@@ -58,6 +59,7 @@ class FieldsDescriber
     {
         return [
             'text'         => 'string("$FIELDNAME$")',
+            'dropdown'     => 'string("$FIELDNAME$")',
             'email'        => 'string("$FIELDNAME$")',
             'textarea'     => 'text("$FIELDNAME$")',
             'radio'        => 'string("$FIELDNAME$")',

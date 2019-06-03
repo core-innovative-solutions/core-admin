@@ -14,6 +14,10 @@
         <input type="text" name="f_title[]" value="{{ old('f_title.'.$index) }}" class="form-control title"
                required="required" placeholder="{{ trans('coreadmin::templates.templates-menu_field_line-field_db_name') }}">
 
+
+
+
+
         <!-- File size limit -->
         <label class="size">{{ trans('coreadmin::templates.templates-menu_field_line-size_limit') }}</label>
         <input type="text" name="f_size[]" value="{{ old('f_size.'.$index, '2') }}" class="form-control size"
@@ -31,10 +35,35 @@
                placeholder="{{ trans('coreadmin::templates.templates-menu_field_line-maximum_height_placeholder') }}" style="display: none;">
         <!-- /File dimensions limit -->
 
+
+
+
+
+
         <!-- Value for radio button -->
         <input type="text" name="f_value[]" value="{{ old('f_value.'.$index) }}" class="form-control value"
                placeholder="{{ trans('coreadmin::templates.templates-menu_field_line-value') }}" style="display: none;">
         <!-- /Value for radio button -->
+
+
+        <!-- Value for dropdown button -->
+        <div class="dropdown-list" style="display: none; margin-top: 10px;">
+            <div class="row dropdown-list-repeat">
+                <div class="col-md-5">
+                    <input type="text" name="f_dropdonw_values[]" value="{{ old('f_dropdonw_values.'.$index) }}" class="form-control dropdown_value"
+                   placeholder="Key" >  
+                </div>
+                <div class="col-md-5">
+                    <input type="text" name="f_dropdonw_values[]" value="{{ old('f_dropdonw_values.'.$index) }}" class="form-control dropdown_value"
+                   placeholder="Value">
+                </div>
+                <div class="col-md-2 add-more-button" style="padding-top: 8px;">
+                    <i class="fa fa-plus text-danger add-more-option" style="cursor: pointer;"></i>
+                </div>
+            </div>
+        </div>
+        <!-- /Value for dropdown button -->
+
 
         <!-- Default value of a checkbox -->
         <select name="f_default[]" class="form-control default_c" style="display: none;">
